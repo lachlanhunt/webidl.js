@@ -276,7 +276,7 @@
         },
 
         toFloat: function toFloat(value) {
-            var x = WebIDL.toUnrestrictedFloat(x);
+            var x = WebIDL.toUnrestrictedFloat(value);
             if (isNaN(x) || !isFinite(x)) throw new TypeError("Cannot convert value to float");
             return x;
         },
@@ -393,7 +393,7 @@
         },
 
         toObject: function toObject(value) {
-            if (typeof value !== "object" || value === null) throw new TypeError("Cannot convert value to Object")
+            if (typeof value !== "object" || value === null) throw new TypeError("Cannot convert value to Object");
             return Object(value);
         },
 
